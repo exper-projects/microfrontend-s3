@@ -1,0 +1,24 @@
+{
+  "name": "microfrontend-s3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:base-app": "cd ./base-app && npm start",
+    "start:crypto-info": "cd ./crypto-info && npm start",
+    "start:holdings": "cd ./holdings && npm start",
+    "start:placed-trade": "cd ./placed-trade && npm start",
+    "start": "concurrently --kill-others \"npm run start:crypto-info\" \"npm run start:holdings\" \"npm run start:placed-trade\" \"npm run start:base-app\"",
+    "install-mfes": "concurrently --kill-others \"cd ./base-app && npm install\" \"cd ./crypto-info && npm install\" \"cd ./holdings && npm install\" \"cd ./placed-trade && npm install\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exper-projects/microfrontend-s3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
