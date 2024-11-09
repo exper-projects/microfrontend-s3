@@ -33,10 +33,10 @@ const Dashboard = () => {
         },
       },
       {
-        isActive: activeTab === BaseRoute.Holdings,
-        title: "Holdings",
+        isActive: activeTab === BaseRoute.Transactions,
+        title: "Transactions",
         onClick: () => {
-          changeTab(BaseRoute.Holdings);
+          changeTab(BaseRoute.Transactions);
         },
       },
     ];

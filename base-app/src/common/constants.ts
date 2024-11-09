@@ -1,5 +1,5 @@
 export enum BaseRoute {
   CryptoInfo = "/crypto-info",
-  Holdings = "/holdings",
+  Transactions = "/transactions",
   PlacedTrade = "/:basePath/placed-trade/:coinCode",
 }

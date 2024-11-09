@@ -3,8 +3,8 @@ import { Route, BrowserRouter, Switch, Redirect } from "react-router-dom";
 import { BaseRoute } from "./common/constants";
 import Dashboard from "./pages/Dashboard";
 import { CryptoInfo } from "./pages/Dashboard/CryptoInfo";
-import { Holdings } from "./pages/Dashboard/Holdings";
 import { PlacedTrade } from "./pages/Dashboard/PlacedTrade";
+import { Transactions } from "./pages/Dashboard/Transactions";
 
 export const AppRoutes = () => {
   return (
@@ -15,8 +15,8 @@ export const AppRoutes = () => {
           <Route path={BaseRoute.CryptoInfo}>
             <CryptoInfo />
           </Route>
-          <Route path={BaseRoute.Holdings}>
-            <Holdings />
+          <Route path={BaseRoute.Transactions}>
+            <Transactions />
           </Route>
           <Route path={BaseRoute.PlacedTrade}>
             <PlacedTrade />

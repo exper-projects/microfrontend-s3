@@ -6,10 +6,10 @@
   "scripts": {
     "start:base-app": "cd ./base-app && npm start",
     "start:crypto-info": "cd ./crypto-info && npm start",
-    "start:holdings": "cd ./holdings && npm start",
+    "start:transactions": "cd ./transactions && npm start",
     "start:placed-trade": "cd ./placed-trade && npm start",
-    "start": "concurrently --kill-others \"npm run start:crypto-info\" \"npm run start:holdings\" \"npm run start:placed-trade\" \"npm run start:base-app\"",
-    "install-mfes": "concurrently --kill-others \"cd ./base-app && npm install\" \"cd ./crypto-info && npm install\" \"cd ./holdings && npm install\" \"cd ./placed-trade && npm install\""
+    "start": "concurrently --kill-others \"npm run start:crypto-info\" \"npm run start:transactions\" \"npm run start:placed-trade\" \"npm run start:base-app\"",
+    "install-mfes": "concurrently --kill-others \"cd ./base-app && npm install\" \"cd ./crypto-info && npm install\" \"cd ./transactions && npm install\" \"cd ./placed-trade && npm install\""
   },
   "repository": {
     "type": "git",

@@ -3,11 +3,13 @@ import { FC } from "react";
 import { ArrowLeftIcon, Button } from "@usy-ui/base";
 import { Dummy } from "src/components/Dummy";
 
-interface HoldingsListProps {
+interface TransactionsListProps {
   baseHistory: any;
 }
 
-export const HoldingsList: FC<HoldingsListProps> = ({ baseHistory }) => {
+export const TransactionsList: FC<TransactionsListProps> = ({
+  baseHistory,
+}) => {
   const goBack = () => {
     baseHistory.goBack();
   };
@@ -17,7 +19,7 @@ export const HoldingsList: FC<HoldingsListProps> = ({ baseHistory }) => {
       <Button size="small" onClick={goBack}>
         <ArrowLeftIcon />
       </Button>
-      Holdings List
+      Transactions List
       <span />
     </Dummy>
   );

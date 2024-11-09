@@ -7,15 +7,17 @@ import {
 } from "src/hooks/mfeLoader";
 import { getMfePath } from "src/utils/helpers";
 
-export const Holdings = () => {
+export const Transactions = () => {
   const history = useHistory();
   const { pathname } = useLocation();
 
-  const HoldingsMfe = mfeLoader<CommonMfeProps>({
-    remoteUrl: `http://localhost:${MfePort.HOLDINGS}/remoteEntry.js`,
-    mfeName: MfeName.HOLDINGS,
+  const TransactionsMfe = mfeLoader<CommonMfeProps>({
+    remoteUrl: `http://localhost:${MfePort.TRANSACTIONS}/remoteEntry.js`,
+    mfeName: MfeName.TRANSACTIONS,
     moduleName: "./App",
   });
 
-  return <HoldingsMfe basePath={getMfePath(pathname)} baseHistory={history} />;
+  return (
+    <TransactionsMfe basePath={getMfePath(pathname)} baseHistory={history} />
+  );
 };

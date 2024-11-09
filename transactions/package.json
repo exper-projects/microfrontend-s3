@@ -1,5 +1,5 @@
 {
-  "name": "holdings",
+  "name": "transactions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/01-frontend/holdings.git"
+    "url": "git+https://github.com/exper-projects/transactions.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/01-frontend/holdings/issues"
+    "url": "https://github.com/exper-projects/transactions/issues"
   },
-  "homepage": "https://github.com/01-frontend/holdings#readme",
+  "homepage": "https://github.com/exper-projects/transactions#readme",
   "dependencies": {
     "@usy-ui/base": "^1.0.2",
     "@babel/runtime": "^7.20.6",

@@ -1,6 +1,7 @@
 import { useContext, useMemo } from "react";
 
 import { Button, Drawer, DrawerContent, DrawerHeader } from "@usy-ui/base";
+import dayjs from "dayjs";
 import { useHistory, useParams } from "react-router-dom";
 import { AppContext } from "src/App";
 import { coinData } from "src/data/coinData";
@@ -19,12 +20,8 @@ export const CoinDetailsDrawer = () => {
     );
   }, [coinCode]);
 
-  const backToOverview = () => {
-    history.goBack();
-  };
-
-  const redirectToHoldings = () => {
-    baseHistory.push("/holdings");
+  const redirectToTransactions = () => {
+    baseHistory.push("/transactions");
   };
 
   const redirectToPlacedTrade = () => {
@@ -43,7 +40,7 @@ export const CoinDetailsDrawer = () => {
     return (
       <Container>
         <h3 style={{ fontWeight: 300 }}>
-          <strong>{coinDetail.code}</strong> - Coin Details
+          <strong>{coinDetail.code}</strong>
         </h3>
         <Row>
           <span>Code</span>
@@ -63,12 +60,13 @@ export const CoinDetailsDrawer = () => {
         </Row>
         <Row>
           <span>Update Time</span>
-          <strong>{coinDetail.updatedTime}</strong>
+          <strong>
+            {dayjs(coinDetail.updatedTime).format("DD MMM, YYYY")}
+          </strong>
         </Row>
         <CtaContainer>
-          <Button onClick={backToOverview}>Back</Button>
-          <Button variant="outline" onClick={redirectToHoldings}>
-            My Holdings
+          <Button variant="outline" onClick={redirectToTransactions}>
+            My Transactions
           </Button>
           <Button variant="primary" onClick={redirectToPlacedTrade}>
             Placed Trade
@@ -81,7 +79,6 @@ export const CoinDetailsDrawer = () => {
   return (
     <Drawer
       header={<DrawerHeader title="Coin Details" onClose={handleDrawerClose} />}
-      isOpen
     >
       <DrawerContent>{renderCoinDetails()}</DrawerContent>
     </Drawer>

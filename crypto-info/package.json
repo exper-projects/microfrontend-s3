@@ -12,18 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/01-frontend/crypto-info.git"
+    "url": "git+https://github.com/exper-projects/crypto-info.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/01-frontend/crypto-info/issues"
+    "url": "https://github.com/exper-projects/crypto-info/issues"
   },
-  "homepage": "https://github.com/01-frontend/crypto-info#readme",
+  "homepage": "https://github.com/exper-projects/crypto-info#readme",
   "dependencies": {
-    "@usy-ui/base": "^1.0.2",
     "@babel/runtime": "^7.20.6",
+    "@usy-ui/base": "^1.0.2",
+    "dayjs": "^1.11.13",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^5.2.0",

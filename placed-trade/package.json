@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/01-frontend/placed-trade.git"
+    "url": "git+https://github.com/exper-projects/placed-trade.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/01-frontend/placed-trade/issues"
+    "url": "https://github.com/exper-projects/placed-trade/issues"
   },
-  "homepage": "https://github.com/01-frontend/placed-trade#readme",
+  "homepage": "https://github.com/exper-projects/placed-trade#readme",
   "dependencies": {
     "@usy-ui/base": "^1.0.2",
     "@babel/runtime": "^7.20.6",
@@ -71,3 +71,4 @@
     "whatwg-fetch": "^3.6.2"
   }
 }
+
